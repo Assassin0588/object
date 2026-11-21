@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Assignment 9 | Chapter 69 - 75</title>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<!-- ===================toastify================ -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<style>
+  :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  body { background:#eef5ee; }
+</style>
+</head>
+
+<body class="min-h-screen text-slate-800" >
+
+  <!-- Navbar -->
+  <header class="bg-slate-900 sticky top-0" style="top: env(safe-area-inset-top, 0px);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+      <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <h1 class="text-white font-semibold text-lg">Assignments</h1>
+        <span class="text-slate-300 text-sm">Chapter 69 - 75</span>
+      </div>
+      <form class="flex w-full sm:w-auto max-w-sm">
+        <input  type="text" placeholder="Search"
+          class="flex-1 sm:w-56 rounded-l-md px-3 py-2 text-sm text-slate-800 bg-white focus:outline-none">
+        <button type="submit"
+          class="bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-medium px-4 py-2 rounded-r-md">
+          Search
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+
+    <!-- Title -->
+    <h2 class="text-center text-2xl sm:text-3xl font-bold text-slate-900">
+      Chapter # 69 - 75 | Objects, Properties, Methods, Constructors, and Prototypes
+    </h2>
+    <hr class="mt-6 border-slate-300">
+
+    <!-- Buttons + Form -->
+    <div class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- Buttons panel -->
+      <section>
+        <h3 class="text-xl font-bold text-center mb-4">Buttons</h3>
+        <div class="border border-slate-300 rounded-md bg-white/40 p-6 flex flex-col items-center gap-4">
+          <button onclick="showImage()" class="w-full max-w-xs bg-red-500 hover:bg-red-600 text-white font-medium py-3 rounded-md shadow-sm transition">
+            Show Image
+          </button>
+          <button onclick="showTable()" class="w-full max-w-xs bg-red-500 hover:bg-red-600 text-white font-medium py-3 rounded-md shadow-sm transition">
+            Show Table
+          </button>
+          <button onclick="showUserInConsole()" class="w-full max-w-xs bg-red-500 hover:bg-red-600 text-white font-medium py-3 rounded-md shadow-sm transition">
+            Print Users in Console
+          </button>
+        </div>
+      </section>
+
+      <!-- Form panel -->
+      <section>
+        <h3 class="text-xl font-bold text-center mb-4">Form</h3>
+        <div class="border border-slate-300 rounded-md bg-white/40 p-6 flex flex-col gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input id="firstName" type="text" placeholder="First Name"
+              class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+            <input id="lastName" type="text" placeholder="Last Name"
+              class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <input id="email" type="email" placeholder="Email"
+              class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600">
+            <input id="dateTime" type="datetime-local"
+              class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-600">
+          </div>
+          <button onclick="addUser()" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-3 rounded-md shadow-sm transition">
+            Add User
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Output -->
+    <section class="mt-10">
+      <h3 class="text-xl font-bold text-center mb-4">Output / Result</h3>
+      <div id="output" class="border border-slate-300 rounded-md bg-white/40 min-h-[180px] p-4 flex justify-center"></div>
+      <!-- =======================output clear============================ -->
+      <div class="flex justify-center mt-4">
+        <button onclick="outClear()" class="bg-white border border-slate-400 hover:bg-slate-100 text-slate-700 text-sm font-medium px-5 py-2 rounded-md">
+          Clear Output
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-white text-center py-4 bg-slate-900">
+    <p id="footer"></p>
+  </footer>
+  <script src="script.js"></script>
+  <!-- ==================toastify-js============== -->
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+</html>
